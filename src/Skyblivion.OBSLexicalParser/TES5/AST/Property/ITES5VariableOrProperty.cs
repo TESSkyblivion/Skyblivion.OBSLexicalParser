@@ -7,12 +7,18 @@ namespace Skyblivion.OBSLexicalParser.TES5.AST.Property
      * Interface TES5Variable
      * Implementers declare they are a variable to be put in a scope.
      */
-    interface ITES5VariableOrProperty : ITES5Value
+    interface ITES5VariableOrProperty
     {
         string Name { get; }
-        new ITES5Type TES5Type { get; set; }
+
+        /**
+         * Inferrable type
+         * This is the type that we infer as we go through the scripts
+         */
+        ITES5Type TES5Type { get; set; }
+
         /*
-        * Get the reference EDID
+        * Reference EDID
         */
         string ReferenceEDID { get; }
         /*
