@@ -6,21 +6,24 @@ using System.Linq;
 
 namespace Skyblivion.OBSLexicalParser.TES5.AST.Property
 {
-    class TES5Property : TES5VariableOrProperty
+    class TES5Property : ITES5VariableOrProperty
     {
         private const string PROPERTY_SUFFIX = "_p";
-        private ITES5Type propertyType;
+        private ITES5Type propertyType; //If we"re tracking a script, this won"t be used anymore
         private TES5ScriptHeader trackedScript;
         private readonly string referenceEDID;
+        public string Name { get; private set; }
+
         public TES5Property(string propertyName, ITES5Type propertyType, string referenceEDID)
-            : base(AddPropertyNameSuffix(propertyName))
         {
-            this.propertyType = propertyType; //If we"re tracking a script, this won"t be used anymore
             this.referenceEDID = referenceEDID;
             this.trackedScript = null;
+            Name = AddPropertyNameSuffix(propertyName);
+            this.propertyType = propertyType;
         }
 
-        public override IEnumerable<string> Output
+
+        public IEnumerable<string> Output
         {
             get
             {
@@ -30,7 +33,7 @@ namespace Skyblivion.OBSLexicalParser.TES5.AST.Property
             }
         }
 
-        public override string ReferenceEDID => referenceEDID;
+        public string ReferenceEDID => referenceEDID;
 
         public string GetPropertyNameWithoutSuffix()
         {
@@ -56,7 +59,7 @@ namespace Skyblivion.OBSLexicalParser.TES5.AST.Property
             return propertyName.Substring(0, propertyName.Length - PROPERTY_SUFFIX.Length);
         }
 
-        public override ITES5Type TES5Type
+        public ITES5Type TES5Type
         {
             get
             {
@@ -75,7 +78,7 @@ namespace Skyblivion.OBSLexicalParser.TES5.AST.Property
             }
         }
 
-        public override void TrackRemoteScript(TES5ScriptHeader scriptHeader)
+        public void TrackRemoteScript(TES5ScriptHeader scriptHeader)
         {
             this.trackedScript = scriptHeader;
             ITES5Type ourNativeType = this.propertyType.NativeType;
