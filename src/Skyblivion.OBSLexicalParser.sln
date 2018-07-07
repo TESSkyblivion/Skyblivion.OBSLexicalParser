@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skyblivion.OBSLexicalParser", "Skyblivion.OBSLexicalParser\Skyblivion.OBSLexicalParser.csproj", "{933F0062-641C-4051-A573-5A704968E8F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skyblivion.OBSLexicalParser", "Skyblivion.OBSLexicalParser\Skyblivion.OBSLexicalParser.csproj", "{933F0062-641C-4051-A573-5A704968E8F5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skyblivion.ESReader", "..\Skyblivion.ESReader\Skyblivion.ESReader\Skyblivion.ESReader.csproj", "{3BCBFE77-293C-4849-8063-B049CC0333EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skyblivion.ESReader", "..\Skyblivion.ESReader\Skyblivion.ESReader\Skyblivion.ESReader.csproj", "{3BCBFE77-293C-4849-8063-B049CC0333EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dissect", "Dissect\Dissect.csproj", "{5326CB97-4868-4B4E-ACAB-885E8D6E533D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dissect", "Dissect\Dissect.csproj", "{5326CB97-4868-4B4E-ACAB-885E8D6E533D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skyblivion.OBSLexicalParserApp", "Skyblivion.OBSLexicalParserApp\Skyblivion.OBSLexicalParserApp.csproj", "{4726AB54-0AD1-48AB-BD8C-7A2B5198DD5D}"
 EndProject

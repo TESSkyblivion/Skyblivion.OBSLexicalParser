@@ -9,13 +9,16 @@ namespace Skyblivion.OBSLexicalParser.TES5.AST.Property
     {
         public string Name { get; private set; }
         public ITES5Type TES5Type { get; set; }
-        public TES5LocalVariableParameterMeaning[] Meanings { get; private set; }
-        public TES5LocalVariable(string nameWithSuffix, TES5BasicType type, TES5LocalVariableParameterMeaning[] meanings = null)
+        public TES5LocalVariable(string nameWithSuffix, TES5BasicType type)
         {
             Name = nameWithSuffix;
             TES5Type = type;
-            if (meanings == null) { meanings = new TES5LocalVariableParameterMeaning[] { }; }
-            this.Meanings = meanings;
+        }
+
+        public ITES5Type TES5DeclaredType {
+            get {
+                return TES5Type;
+            }
         }
 
         /*

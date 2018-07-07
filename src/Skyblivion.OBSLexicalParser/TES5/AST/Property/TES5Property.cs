@@ -22,6 +22,13 @@ namespace Skyblivion.OBSLexicalParser.TES5.AST.Property
             this.propertyType = propertyType;
         }
 
+        public ITES5Type TES5DeclaredType
+        {
+            get
+            {
+                return TES5Type;
+            }
+        }
 
         public IEnumerable<string> Output
         {

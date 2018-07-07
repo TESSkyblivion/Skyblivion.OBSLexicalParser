@@ -17,6 +17,17 @@ namespace Skyblivion.OBSLexicalParser.TES5.AST.Property
          */
         ITES5Type TES5Type { get; set; }
 
+        /**
+         * Declaring type
+         * This is the type that we intend to declare
+         * For most cases, this will be exactly the same as inferring type
+         * as we have all the liberty in declaring whatever we want
+         * A notable exception is native function/event handlers' parameters,
+         * where the types are set in stone by the engine and hence we need
+         * to declare them in a particular way and downward cast
+         */
+        ITES5Type TES5DeclaredType { get; }
+
         /*
         * Reference EDID
         */

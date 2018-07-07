@@ -25,6 +25,14 @@ namespace Skyblivion.OBSLexicalParser.TES5.AST.Property
             set { this.scriptHeader.SetNativeType(value); }
         }
 
+        public ITES5Type TES5DeclaredType
+        {
+            get
+            {
+                return TES5Type;
+            }
+        }
+
         public string ReferenceEDID => this.scriptHeader.EDID;
 
 
